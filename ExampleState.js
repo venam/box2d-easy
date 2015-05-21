@@ -9,15 +9,15 @@ function ExampleState(game) {
 			x:10.5,
 			y:4.4,
 			radius: 0.3,
-			dynamic: true,
+			dynamic: false,
 			type: "circle",
 			color: "#9187af"
 		},
 		{
 			id:1,
 			x:9.2,
-			y:4.4,
-			angle:0,
+			y:10.4,
+			angle: 0.1,
 			halfWidth:4.8,
 			halfHeight:0.2,
 			dynamic: true,
@@ -38,7 +38,7 @@ ExampleState.prototype.draw = function() {
 	this.game.ctx.textAlign = "center";
 	this.game.ctx.fillStyle = "#FFF";
 	this.game.ctx.font = "20px Helvetica";
-	this.game.ctx.fillText("Example Game", 90, 20);
+	this.game.ctx.fillText("Bean Machine", 90, 20);
 	this.game.ctx.fillRect(30,28, 200, 3);
 	for (var id in this.world) {
 		var entity = this.world[id];
@@ -52,7 +52,6 @@ ExampleState.prototype.update = function(animStart) {
 	this.bodiesState = this.box.getState();
 	for (var id in this.bodiesState) {
 		var entity = this.world[id];
-		console.log(entity);
 		if (entity) {
 			entity.update(this.bodiesState[id]);
 		}

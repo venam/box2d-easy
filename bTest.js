@@ -123,8 +123,8 @@ bTest.prototype.setBodies = function(bodyEntities) {
 		var entity = bodyEntities[id];
 		bodyDef.position.x = entity.x;
 		bodyDef.position.y = entity.y;
+		bodyDef.angle = entity.angle || 0.0;
 		bodyDef.userData = entity.id;
-		bodyDef.angle = entity.angle;
 		var body = this.registerBody(bodyDef);
 
 		if (entity.radius) {

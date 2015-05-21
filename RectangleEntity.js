@@ -1,8 +1,9 @@
 //sub-class of Entity
-function RectangleEntity(id, x, y,center, color, halfWidth, halfHeight, dynamic) {
+function RectangleEntity(id, x, y,center, color, halfWidth, halfHeight, dynamic, angle) {
 	Entity.call(this, id, x, y,center,color, dynamic);
 	this.halfWidth = halfWidth;
 	this.halfHeight = halfHeight;
+	this.angle = angle || 0.0;
 	this.type = "rectangle";
 }
 //Inherit from Entity and override constructor

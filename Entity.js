@@ -59,9 +59,9 @@ Entity.build = function(def) {
 	} else if (def.type=="polygon") {
 		return new PolygonEntity(def.id, def.x, def.y, NULL_CENTER, def.color, def.polys, def.dynamic);
 	} else if (def.type=="rectangle"){
-		return new RectangleEntity(def.id, def.x, def.y, NULL_CENTER, def.color,def.halfWidth, def.halfHeight, def.dynamic);
+		return new RectangleEntity(def.id, def.x, def.y, NULL_CENTER, def.color,def.halfWidth, def.halfHeight, def.dynamic, def.angle);
 	} else {
-		return new RectangleEntity(def.id, def.x, def.y, NULL_CENTER, def.color,def.halfWidth, def.halfHeight, def.dynamic);
+		return new RectangleEntity(def.id, def.x, def.y, NULL_CENTER, def.color,def.halfWidth, def.halfHeight, def.dynamic, def.angle);
 	}
 }
 

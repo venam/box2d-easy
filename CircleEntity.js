@@ -5,6 +5,7 @@ function CircleEntity(id, x, y, center, color,radius, dynamic) {
 	this.color = color;
 	this.radius = radius;
 	this.type   = "circle";
+	this.angle = 0.1;
 }
 //inherit and override constructor to not point back to Entity's constructor
 CircleEntity.prototype = new Entity();
